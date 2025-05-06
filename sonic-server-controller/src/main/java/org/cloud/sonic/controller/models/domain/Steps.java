@@ -75,6 +75,10 @@ public class Steps implements Serializable, TypeConverter<Steps, StepsDTO> {
     private String stepType;
 
     @TableField
+    @Column(type = MySqlTypeConstant.VARCHAR, length = 255, defaultValue = "", isNull = false, comment = "备注")
+    private String remark;
+
+    @TableField
     @Column(type = MySqlTypeConstant.LONGTEXT, isNull = false, comment = "其它信息")
     private String text;
 
